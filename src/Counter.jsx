@@ -1,17 +1,20 @@
 import React from "react";
-function Counter(){
-    var[count,setCount]=React.useState(0);
-    function inc(){
-        setCount(count+1);
+function Counter(x){
+    console.log(x)
+    var[count,setCount]=React.useState(x.start);
+    function inc(x){
+    
+        setCount(count+(x.incst));
+        console.log(setCount)
     }
-    function dec(){
-        setCount(count-1);
+    function dec(x){
+        setCount(count-x.incst);
     }
     return(
         <div>
-            <h1>Counter:{count}</h1>
-            <button onClick={()=>{inc()}}>Increment</button>
-            <button onClick={()=>{dec()}}>Decrement</button>
+            <h1>{x.cname}:{count}</h1>
+            <button onClick={()=>{inc(x)}}>Increment</button>
+            <button onClick={()=>{dec(x)}}>Decrement</button>
         </div>
     )
 }
