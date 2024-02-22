@@ -5,8 +5,14 @@
   justify-content: space-around;
 }
 .addCard{
-  width:300px
+  width:300px;
+  height:'200px'
 }
 .item-card{
   width:250px
+}
+.cartShape{
+  width:100px;
+  height:100px;
+  color:black
 }

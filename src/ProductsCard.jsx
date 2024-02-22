@@ -3,7 +3,7 @@ import React from 'react'
 const ProductsCard = ({cartItems}) => {
   return (
     <div>
-      <h3>Products cards</h3>
+      <i className="bi bi-cart4 cartShape"></i>
       <ul>
         {
            cartItems?.map((item)=>{
@@ -14,6 +14,10 @@ const ProductsCard = ({cartItems}) => {
 
         }
       </ul>
+      {
+         cartItems.length===0 &&<h3>Cart is Empty</h3>
+      }
+     
     </div>
   )
 }

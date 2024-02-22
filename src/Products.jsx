@@ -13,7 +13,12 @@ const Products = () => {
 
     }, [])
     function addTocart(product){
-        setCartItems([...cartItems,{...product}])
+        if(product.quantity){
+            product.quantity=product.quantity++
+        }else{
+            product.quantity=1;
+            setCartItems([...cartItems,{...product}])
+        }
     }
     React.useEffect(()=>{
         console.log(cartItems)
@@ -40,7 +45,7 @@ const Products = () => {
 
                 }
         </div>
-        <div className='border border-dark w-40'>
+        <div className='border border-dark w-40 '>
             <ProductsCard cartItems={cartItems}/>
         </div>
         </div>)
