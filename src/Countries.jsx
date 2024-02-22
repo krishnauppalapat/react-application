@@ -5,7 +5,7 @@ function Countries(){
     useEffect(()=>{
         axios.get('https://restcountries.com/v3.1/all').then(function(res){
             console.log(res.data)
-        setCountry(res.data)
+        setCountry([...res.data])
     },[])
 
     })

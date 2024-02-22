@@ -11,3 +11,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+#dd{
+  display:none;
+  position:absolute;
+  bottom:0px;
+  right:0px;
+  border:2px solid;
+  background-color: lightgreen;
+}
+.cardStyle{
+  width:'100px';
+
+}
+.main-card{
+  display:flex;
+  flex-wrap: wrap;
+  width:80%;
+  justify-content:space-around;
+  
+  
+}
+.item-card{
+  width:300px
+}
+.addBrd{
+  border:'2px solid black'
+}
